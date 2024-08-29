@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body *{ 
+            /* 
+                Queria que aplicara a todos menos al body => pongo "body *"="todo lo que hay dentro del body" 
+                Nota: con body{....} aplica solo al body y NO a su contenido (y la herencia??) 
+                Nota: en cuanto a border,margin,padding no hereda a su contenido peero se ve que hay propiedades como background-color que si
+                        se heredan
+            */
+            border: 2px solid rgb(94, 74, 74);
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background-color: rgb(221, 196, 201);
+        }
+        #idCabecera, main {
+            margin-bottom: 2em;
+        }
+        main {
+            background-color: rgb(154, 204, 204);
+            padding: 1em 1em 1em 1em;
+        }
+        .bigWord{
+            padding: 0.2em
+        }
+    </style>
+</head>
+<body>
+    <header id="idCabecera">
+        <h1 class="bigWord">Cabecera (HEADER)</h1>
+    </header>
+    <nav id="idNav">
+        <h2 class="bigWord">Lista de navegacion (NAV)</h2>
+        <ul>
+            <li class="linkClass">seccion 1 (LI)</li>
+            <li class="linkClass">seccion 2 (LI)</li>
+            <li class="linkClass">seccion 3 (LI)</li>
+        </ul>
+    </nav>
+    <main id="idMain">
+        <h2 class="bigWord">Contenido principal (MAIN)</h2>
+        <section>
+            <h2>Seccion 1 (SECTION)</h2>
+            <article class="artClass">
+                <h3>Articulo 1 (ARTICLE)</h3>
+                <h4>Enlace a pagina 12:</h4>
+                <a href="https://www.pagina12.com.ar/" target="_blank">ir a pagina12</a>
+            </article>
+            <article class="artClass">
+                <h3>Articulo 2 (ARTICLE)</h3>
+                <img src="./imgs/simpson1.jpg" alt="">
+                <a href="">ir al articulo 3</a>
+            </article>
+        </section>
+        <section>
+            <h2>Seccion 2 (SECTION)</h2>
+            <article>
+                <h3>Articulo 3 (ARTICLE)</h3>
+                <p>este es un parrafo p y bjo linear</p>
+                <form action="/formus/procesar.com" method="get" autocomplete="on">
+                    <label for="idName">Nombre:</label> <input id="idName" type="text">
+                    <br/>
+                    <label>Apellido</label>             <input type="text" >
+                    <br/>
+                    <label for="idEdad">Edad:</label>   <input type="number" name="" id="idEdad">
+                    <br/>
+                    <button type="submit">Enviar</button>
+                </form>
+            </article>
+        </section>
+        <aside>
+            <h2>ASIDE</h2>
+        </aside>
+    </main>
+    <footer>
+        <h2>Barra de pie (FOOTER)</h2>
+    </footer>    
+</body>
+</html>
